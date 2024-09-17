@@ -1,0 +1,108 @@
+[gd_scene load_steps=14 format=3 uid="uid://dc853a0h81jf0"]
+
+[ext_resource type="Script" path="res://game/game.gd" id="1_5ywok"]
+[ext_resource type="Texture2D" uid="uid://rsr8inupd6if" path="res://resource/taiko_drum.png" id="1_7x00m"]
+[ext_resource type="Texture2D" uid="uid://dvmtfbc4gisk" path="res://resource/circle_rate/bad.png" id="1_td3v1"]
+[ext_resource type="PackedScene" uid="uid://b2vbsaafjjd8v" path="res://game/hit.tscn" id="2_blxoh"]
+[ext_resource type="Texture2D" uid="uid://cmbbdcgmnyh2q" path="res://resource/circle_rate/excellent.png" id="2_m4f5r"]
+[ext_resource type="Script" path="res://game/touch_screen_button.gd" id="3_h60jb"]
+[ext_resource type="Texture2D" uid="uid://d0a1d5ben4ppd" path="res://resource/circle_rate/good.png" id="3_sjriq"]
+[ext_resource type="Texture2D" uid="uid://d4e6a7kfh6wn3" path="res://resource/circle_rate/none.png" id="4_v71qw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_te63l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_td3v1")
+}],
+"loop": true,
+"name": &"bad",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_m4f5r")
+}],
+"loop": true,
+"name": &"excellent",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_sjriq")
+}],
+"loop": true,
+"name": &"good",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_v71qw")
+}],
+"loop": true,
+"name": &"none",
+"speed": 5.0
+}]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_o28oe"]
+points = PackedVector2Array(0, 0, -560, 0, -567, -100, -589, -200, -637, -300, -752, -400, -960, -440, -960, -600, 0, -600)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_nr6hy"]
+points = PackedVector2Array(0, 0, 560, 0, 567, -100, 589, -200, 637, -300, 752, -400, 960, -440, 960, -600, 0, -600)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_iy2ef"]
+points = PackedVector2Array(0, 0, 400, 0, 393, -100, 371, -200, 323, -300, 208, -400, 0, -440)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_5rbjv"]
+points = PackedVector2Array(0, 0, -400, 0, -393, -100, -371, -200, -323, -300, -208, -400, 0, -440)
+
+[node name="Main" type="Node"]
+script = ExtResource("1_5ywok")
+hit_scene = ExtResource("2_blxoh")
+
+[node name="CircleRate" type="AnimatedSprite2D" parent="."]
+position = Vector2(360, 250)
+scale = Vector2(2.9375, 2.9375)
+sprite_frames = SubResource("SpriteFrames_te63l")
+animation = &"none"
+
+[node name="Drum" type="Sprite2D" parent="."]
+position = Vector2(960, 944)
+texture = ExtResource("1_7x00m")
+
+[node name="OuterRight" type="TouchScreenButton" parent="."]
+position = Vector2(1920, 1200)
+shape = SubResource("ConvexPolygonShape2D_o28oe")
+script = ExtResource("3_h60jb")
+
+[node name="OuterLeft" type="TouchScreenButton" parent="."]
+position = Vector2(0, 1200)
+shape = SubResource("ConvexPolygonShape2D_nr6hy")
+script = ExtResource("3_h60jb")
+
+[node name="InnerRight" type="TouchScreenButton" parent="."]
+position = Vector2(960, 1200)
+shape = SubResource("ConvexPolygonShape2D_iy2ef")
+script = ExtResource("3_h60jb")
+
+[node name="InnerLeft" type="TouchScreenButton" parent="."]
+position = Vector2(960, 1200)
+shape = SubResource("ConvexPolygonShape2D_5rbjv")
+script = ExtResource("3_h60jb")
+
+[node name="HitPosition" type="Marker2D" parent="."]
+position = Vector2(1790, 250)
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="HitTimer" type="Timer" parent="."]
+
+[connection signal="pressed" from="OuterRight" to="OuterRight" method="_on_pressed"]
+[connection signal="pressed" from="OuterLeft" to="OuterLeft" method="_on_pressed"]
+[connection signal="pressed" from="InnerRight" to="InnerRight" method="_on_pressed"]
+[connection signal="pressed" from="InnerLeft" to="InnerLeft" method="_on_pressed"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="timeout" from="HitTimer" to="." method="_on_hit_timer_timeout"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2vbsaafjjd8v"]
+
+[ext_resource type="Texture2D" uid="uid://l7jkql3b36gq" path="res://resource/hit/blue.png" id="1_i2jfc"]
+[ext_resource type="Texture2D" uid="uid://cifdgdtljdqk6" path="res://resource/hit/red.png" id="2_4sw21"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ywjj6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_i2jfc")
+}],
+"loop": true,
+"name": &"blue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4sw21")
+}],
+"loop": true,
+"name": &"red",
+"speed": 5.0
+}]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ywjj6")
+animation = &"red"
