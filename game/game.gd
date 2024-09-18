@@ -12,8 +12,8 @@ func _ready() -> void:
 	hits = [
 		{'type': Constants.HitType.RED, 'delay': 1},
 		{'type': Constants.HitType.BLUE, 'delay': 1}, 
-		{'type': Constants.HitType.BLUE, 'delay': 2}, 
-		{'type': Constants.HitType.RED, 'delay': 1},
+		{'type': Constants.HitType.BIGBLUE, 'delay': 2}, 
+		{'type': Constants.HitType.BIGRED, 'delay': 1},
 	]
 	ar = 1
 	acc = 0.1
@@ -21,7 +21,8 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	$Label.text = str($HitStartTimer.time_left) + '\n' + str($HitEndTimer.time_left)
+	$Label.text = (str($HitStartTimer.time_left) + '\n' + str($HitEndTimer.time_left) + 
+	'\n' + str(delta))
 
 
 func instantiate_hit(dict_hit) -> void:
@@ -49,15 +50,33 @@ func next_hit(delay: float) -> Constants.HitType:
 
 func drum_press(press_type: String) -> void:
 	var rest_time = $HitEndTimer.time_left
-	if rest_time <= acc * 2:
+	if 0 < rest_time && rest_time <= acc * 2:
 		var hit_type = next_hit(rest_time)
-		if (press_type == 'inner' and hit_type == Constants.HitType.RED or 
-			press_type == 'outer' and hit_type == Constants.HitType.BLUE):
+		var is_excellent_interval = abs(rest_time - acc) <= acc / 2
+		var is_correct_press = ((press_type == 'inner' || press_type == 'double_inner') &&
+			hit_type == Constants.HitType.RED ||
+			(press_type == 'outer' || press_type == 'double_outer') &&
+			hit_type == Constants.HitType.BLUE)
+		var is_correct_double_press = (press_type == 'double_inner' &&
+			hit_type == Constants.HitType.BIGRED ||
+			press_type == 'double_outer' &&
+			hit_type == Constants.HitType.BIGBLUE)
+			
+		if is_excellent_interval && (is_correct_press || is_correct_double_press):
 			$CircleRate.play_animation('excellent')
+			$Hud.add_points(300)
+			$Label3.text += str(abs(rest_time - acc)) + 'exce\n'
+		elif (!is_excellent_interval && (is_correct_press || is_correct_double_press) ||
+			is_excellent_interval && !is_correct_double_press):
+			$CircleRate.play_animation('good')
+			$Hud.add_points(100)
+			$Label3.text += str(abs(rest_time - acc)) + 'good\n'
 		else:
 			$CircleRate.play_animation('bad')
+			$Hud.break_multiplier()
+			$Label3.text += '\n'
 		#добавить очки
-		$Label2.text += press_type + ' ' + str(hit_type == Constants.HitType.RED) + '\n'
+	$Label2.text += press_type + '\n'
 
 
 func _on_start_timer_timeout() -> void:
@@ -78,4 +97,5 @@ func _on_hit_start_timer_timeout() -> void:
 
 func _on_hit_end_timer_timeout() -> void:
 	$CircleRate.play_animation('bad')
+	$Hud.break_multiplier()
 	next_hit(0)

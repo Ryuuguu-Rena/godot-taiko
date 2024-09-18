@@ -75,10 +75,16 @@ one_shot = true
 [node name="HitStartTimer" type="Timer" parent="."]
 wait_time = 0.05
 
+[node name="Label3" type="Label" parent="."]
+offset_left = 338.0
+offset_top = 411.0
+offset_right = 576.0
+offset_bottom = 600.0
+
 [node name="Label2" type="Label" parent="."]
 offset_left = 4.0
 offset_top = 402.0
-offset_right = 1911.0
+offset_right = 242.0
 offset_bottom = 591.0
 
 [node name="Label" type="Label" parent="."]

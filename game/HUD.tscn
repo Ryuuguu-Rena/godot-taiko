@@ -1,13 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cg773y0wxvc4y"]
+[gd_scene load_steps=10 format=3 uid="uid://cg773y0wxvc4y"]
 
 [ext_resource type="Script" path="res://game/hud.gd" id="1_vfkar"]
 [ext_resource type="Texture2D" uid="uid://rsr8inupd6if" path="res://resource/taiko_drum.png" id="2_iqotm"]
-
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_ef3q1"]
-points = PackedVector2Array(0, 0, -560, 0, -567, -100, -589, -200, -637, -300, -752, -400, -960, -440, -960, -600, 0, -600)
-
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_chdxr"]
-points = PackedVector2Array(0, 0, 560, 0, 567, -100, 589, -200, 637, -300, 752, -400, 960, -440, 960, -600, 0, -600)
+[ext_resource type="AudioStream" uid="uid://b3h1n34i3ifjh" path="res://resource/sounds/taiko-hit-2.wav" id="3_xbht8"]
+[ext_resource type="AudioStream" uid="uid://cde4dir106r23" path="res://resource/sounds/taiko-drum-sticks-3.wav" id="4_bu1el"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_pt5ux"]
 points = PackedVector2Array(0, 0, 400, 0, 393, -100, 371, -200, 323, -300, 208, -400, 0, -440)
@@ -15,20 +11,21 @@ points = PackedVector2Array(0, 0, 400, 0, 393, -100, 371, -200, 323, -300, 208, 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_pin7y"]
 points = PackedVector2Array(0, 0, -400, 0, -393, -100, -371, -200, -323, -300, -208, -400, 0, -440)
 
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_ef3q1"]
+points = PackedVector2Array(0, 0, -560, 0, -567, -100, -589, -200, -637, -300, -752, -400, -960, -440, -960, -600, 0, -600)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_chdxr"]
+points = PackedVector2Array(0, 0, 560, 0, 567, -100, 589, -200, 637, -300, 752, -400, 960, -440, 960, -600, 0, -600)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ate5g"]
+font_size = 80
+
 [node name="Hud" type="Node"]
 script = ExtResource("1_vfkar")
 
 [node name="Drum" type="Sprite2D" parent="."]
 position = Vector2(960, 944)
 texture = ExtResource("2_iqotm")
-
-[node name="OuterRight" type="TouchScreenButton" parent="."]
-position = Vector2(1920, 1200)
-shape = SubResource("ConvexPolygonShape2D_ef3q1")
-
-[node name="OuterLeft" type="TouchScreenButton" parent="."]
-position = Vector2(0, 1200)
-shape = SubResource("ConvexPolygonShape2D_chdxr")
 
 [node name="InnerRight" type="TouchScreenButton" parent="."]
 position = Vector2(960, 1200)
@@ -38,11 +35,63 @@ shape = SubResource("ConvexPolygonShape2D_pt5ux")
 position = Vector2(960, 1200)
 shape = SubResource("ConvexPolygonShape2D_pin7y")
 
-[connection signal="pressed" from="OuterRight" to="." method="outer_press"]
-[connection signal="released" from="OuterRight" to="." method="outer_releas"]
-[connection signal="pressed" from="OuterLeft" to="." method="outer_press"]
-[connection signal="released" from="OuterLeft" to="." method="outer_releas"]
+[node name="OuterRight" type="TouchScreenButton" parent="."]
+position = Vector2(1920, 1200)
+shape = SubResource("ConvexPolygonShape2D_ef3q1")
+
+[node name="OuterLeft" type="TouchScreenButton" parent="."]
+position = Vector2(0, 1200)
+shape = SubResource("ConvexPolygonShape2D_chdxr")
+
+[node name="InnerTimer" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
+[node name="OuterTimer" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
+[node name="InnerAudio" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(967, 601)
+stream = ExtResource("3_xbht8")
+volume_db = 8.0
+
+[node name="OuterAudio" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(969, 565)
+stream = ExtResource("4_bu1el")
+volume_db = 10.0
+
+[node name="Multiplier" type="Label" parent="."]
+offset_left = 22.0
+offset_top = 180.0
+offset_right = 222.0
+offset_bottom = 320.0
+text = "x0"
+label_settings = SubResource("LabelSettings_ate5g")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Points" type="Label" parent="."]
+offset_left = 1396.0
+offset_right = 1910.0
+offset_bottom = 137.0
+text = "0"
+label_settings = SubResource("LabelSettings_ate5g")
+horizontal_alignment = 2
+
+[node name="Label" type="Label" parent="."]
+offset_left = 447.0
+offset_top = -2.0
+offset_right = 633.0
+offset_bottom = 71.0
+
 [connection signal="pressed" from="InnerRight" to="." method="inner_press"]
 [connection signal="released" from="InnerRight" to="." method="inner_releas"]
 [connection signal="pressed" from="InnerLeft" to="." method="inner_press"]
 [connection signal="released" from="InnerLeft" to="." method="inner_releas"]
+[connection signal="pressed" from="OuterRight" to="." method="outer_press"]
+[connection signal="released" from="OuterRight" to="." method="outer_releas"]
+[connection signal="pressed" from="OuterLeft" to="." method="outer_press"]
+[connection signal="released" from="OuterLeft" to="." method="outer_releas"]
+[connection signal="timeout" from="InnerTimer" to="." method="_on_inner_timer_timeout"]
+[connection signal="timeout" from="OuterTimer" to="." method="_on_outer_timer_timeout"]
