@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dc853a0h81jf0"]
+[gd_scene load_steps=11 format=3 uid="uid://dc853a0h81jf0"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_5ywok"]
 [ext_resource type="Texture2D" uid="uid://dvmtfbc4gisk" path="res://resource/circle_rate/bad.png" id="1_td3v1"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d0a1d5ben4ppd" path="res://resource/circle_rate/good.png" id="3_sjriq"]
 [ext_resource type="Texture2D" uid="uid://d4e6a7kfh6wn3" path="res://resource/circle_rate/none.png" id="4_v71qw"]
 [ext_resource type="Script" path="res://game/circle_rate.gd" id="7_c77nj"]
+[ext_resource type="AudioStream" uid="uid://bo1dsvxmiqutu" path="res://resource/sounds/map1.mp3" id="9_3xc2d"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_te63l"]
 animations = [{
@@ -64,9 +65,11 @@ one_shot = true
 position = Vector2(1790, 250)
 
 [node name="StartTimer" type="Timer" parent="."]
-wait_time = 2.0
 one_shot = true
 autostart = true
+
+[node name="MusicTimer" type="Timer" parent="."]
+one_shot = true
 
 [node name="HitEndTimer" type="Timer" parent="."]
 wait_time = 2.0
@@ -87,11 +90,21 @@ offset_top = 402.0
 offset_right = 242.0
 offset_bottom = 591.0
 
+[node name="Error" type="Label" parent="."]
+offset_left = 3.0
+offset_top = 427.0
+offset_right = 1120.0
+offset_bottom = 590.0
+
 [node name="Label" type="Label" parent="."]
 offset_left = 8.0
 offset_top = 12.0
 offset_right = 203.0
 offset_bottom = 101.0
+
+[node name="MapMusic" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(960, 607)
+stream = ExtResource("9_3xc2d")
 
 [connection signal="double_inner" from="Hud" to="." method="drum_press" binds= ["double_inner"]]
 [connection signal="double_outer" from="Hud" to="." method="drum_press" binds= ["double_outer"]]
@@ -99,5 +112,6 @@ offset_bottom = 101.0
 [connection signal="outer" from="Hud" to="." method="drum_press" binds= ["outer"]]
 [connection signal="timeout" from="CircleRate/AnimTimer" to="CircleRate" method="_on_anim_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="timeout" from="MusicTimer" to="." method="_on_music_timer_timeout"]
 [connection signal="timeout" from="HitEndTimer" to="." method="_on_hit_end_timer_timeout"]
 [connection signal="timeout" from="HitStartTimer" to="." method="_on_hit_start_timer_timeout"]

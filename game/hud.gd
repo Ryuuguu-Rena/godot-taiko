@@ -13,7 +13,7 @@ var current_inner_signal
 var current_outer_signal
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed('inner_left') ||
 		Input.is_action_just_pressed('inner_right')):
 		inner_press()

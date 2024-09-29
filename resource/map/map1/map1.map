@@ -1,0 +1,698 @@
+[
+	{
+		"delay": 0.127,
+		"type": 0
+	},
+	{
+		"delay": 0.228,
+		"type": 0
+	},
+	{
+		"delay": 0.463,
+		"type": 0
+	},
+	{
+		"delay": 0.241,
+		"type": 0
+	},
+	{
+		"delay": 0.226,
+		"type": 0
+	},
+	{
+		"delay": 0.467,
+		"type": 0
+	},
+	{
+		"delay": 0.241,
+		"type": 0
+	},
+	{
+		"delay": 0.226,
+		"type": 0
+	},
+	{
+		"delay": 0.452,
+		"type": 0
+	},
+	{
+		"delay": 0.226,
+		"type": 0
+	},
+	{
+		"delay": 0.241,
+		"type": 0
+	},
+	{
+		"delay": 0.467,
+		"type": 0
+	},
+	{
+		"delay": 0.208,
+		"type": 0
+	},
+	{
+		"delay": 0.233,
+		"type": 0
+	},
+	{
+		"delay": 0.255,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.235,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.24,
+		"type": 0
+	},
+	{
+		"delay": 0.219,
+		"type": 0
+	},
+	{
+		"delay": 0.24,
+		"type": 0
+	},
+	{
+		"delay": 0.346,
+		"type": 0
+	},
+	{
+		"delay": 0.112,
+		"type": 0
+	},
+	{
+		"delay": 0.917,
+		"type": 0
+	},
+	{
+		"delay": 0.232,
+		"type": 0
+	},
+	{
+		"delay": 0.228,
+		"type": 0
+	},
+	{
+		"delay": 0.231,
+		"type": 0
+	},
+	{
+		"delay": 0.238,
+		"type": 0
+	},
+	{
+		"delay": 0.225,
+		"type": 0
+	},
+	{
+		"delay": 0.238,
+		"type": 0
+	},
+	{
+		"delay": 0.231,
+		"type": 0
+	},
+	{
+		"delay": 0.238,
+		"type": 0
+	},
+	{
+		"delay": 0.216,
+		"type": 0
+	},
+	{
+		"delay": 0.238,
+		"type": 0
+	},
+	{
+		"delay": 0.344,
+		"type": 0
+	},
+	{
+		"delay": 0.113,
+		"type": 0
+	},
+	{
+		"delay": 0.918,
+		"type": 0
+	},
+	{
+		"delay": 0.239,
+		"type": 0
+	},
+	{
+		"delay": 0.225,
+		"type": 0
+	},
+	{
+		"delay": 0.233,
+		"type": 0
+	},
+	{
+		"delay": 0.236,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.231,
+		"type": 0
+	},
+	{
+		"delay": 0.231,
+		"type": 0
+	},
+	{
+		"delay": 0.233,
+		"type": 0
+	},
+	{
+		"delay": 0.226,
+		"type": 0
+	},
+	{
+		"delay": 0.242,
+		"type": 0
+	},
+	{
+		"delay": 0.45,
+		"type": 0
+	},
+	{
+		"delay": 0.231,
+		"type": 0
+	},
+	{
+		"delay": 0.121,
+		"type": 0
+	},
+	{
+		"delay": 0.121,
+		"type": 0
+	},
+	{
+		"delay": 0.231,
+		"type": 0
+	},
+	{
+		"delay": 0.446,
+		"type": 0
+	},
+	{
+		"delay": 0.251,
+		"type": 0
+	},
+	{
+		"delay": 0.217,
+		"type": 0
+	},
+	{
+		"delay": 0.231,
+		"type": 0
+	},
+	{
+		"delay": 0.242,
+		"type": 0
+	},
+	{
+		"delay": 0.224,
+		"type": 0
+	},
+	{
+		"delay": 0.233,
+		"type": 0
+	},
+	{
+		"delay": 0.242,
+		"type": 0
+	},
+	{
+		"delay": 0.226,
+		"type": 0
+	},
+	{
+		"delay": 0.208,
+		"type": 0
+	},
+	{
+		"delay": 0.247,
+		"type": 0
+	},
+	{
+		"delay": 0.22,
+		"type": 0
+	},
+	{
+		"delay": 0.238,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.238,
+		"type": 0
+	},
+	{
+		"delay": 0.226,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.244,
+		"type": 0
+	},
+	{
+		"delay": 0.224,
+		"type": 0
+	},
+	{
+		"delay": 0.455,
+		"type": 0
+	},
+	{
+		"delay": 0.233,
+		"type": 0
+	},
+	{
+		"delay": 0.224,
+		"type": 0
+	},
+	{
+		"delay": 0.242,
+		"type": 0
+	},
+	{
+		"delay": 0.224,
+		"type": 0
+	},
+	{
+		"delay": 0.244,
+		"type": 0
+	},
+	{
+		"delay": 0.341,
+		"type": 0
+	},
+	{
+		"delay": 0.887,
+		"type": 0
+	},
+	{
+		"delay": 0.137,
+		"type": 0
+	},
+	{
+		"delay": 0.237,
+		"type": 0
+	},
+	{
+		"delay": 0.224,
+		"type": 0
+	},
+	{
+		"delay": 0.232,
+		"type": 0
+	},
+	{
+		"delay": 0.237,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.24,
+		"type": 0
+	},
+	{
+		"delay": 0.224,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.349,
+		"type": 0
+	},
+	{
+		"delay": 0.893,
+		"type": 0
+	},
+	{
+		"delay": 0.139,
+		"type": 0
+	},
+	{
+		"delay": 0.233,
+		"type": 0
+	},
+	{
+		"delay": 0.231,
+		"type": 0
+	},
+	{
+		"delay": 0.235,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.233,
+		"type": 0
+	},
+	{
+		"delay": 0.235,
+		"type": 0
+	},
+	{
+		"delay": 0.231,
+		"type": 0
+	},
+	{
+		"delay": 0.231,
+		"type": 0
+	},
+	{
+		"delay": 0.238,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.11,
+		"type": 0
+	},
+	{
+		"delay": 0.455,
+		"type": 0
+	},
+	{
+		"delay": 0.111,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.464,
+		"type": 0
+	},
+	{
+		"delay": 0.242,
+		"type": 0
+	},
+	{
+		"delay": 0.241,
+		"type": 0
+	},
+	{
+		"delay": 0.217,
+		"type": 0
+	},
+	{
+		"delay": 0.23,
+		"type": 0
+	},
+	{
+		"delay": 0.226,
+		"type": 0
+	},
+	{
+		"delay": 0.23,
+		"type": 0
+	},
+	{
+		"delay": 0.234,
+		"type": 0
+	},
+	{
+		"delay": 0.237,
+		"type": 0
+	},
+	{
+		"delay": 0.226,
+		"type": 0
+	},
+	{
+		"delay": 0.462,
+		"type": 0
+	},
+	{
+		"delay": 0.253,
+		"type": 0
+	},
+	{
+		"delay": 0.436,
+		"type": 0
+	},
+	{
+		"delay": 0.453,
+		"type": 0
+	},
+	{
+		"delay": 0.245,
+		"type": 0
+	},
+	{
+		"delay": 0.224,
+		"type": 0
+	},
+	{
+		"delay": 0.24,
+		"type": 0
+	},
+	{
+		"delay": 0.461,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.464,
+		"type": 0
+	},
+	{
+		"delay": 0.237,
+		"type": 0
+	},
+	{
+		"delay": 0.227,
+		"type": 0
+	},
+	{
+		"delay": 0.456,
+		"type": 0
+	},
+	{
+		"delay": 0.237,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.461,
+		"type": 0
+	},
+	{
+		"delay": 0.237,
+		"type": 0
+	},
+	{
+		"delay": 0.213,
+		"type": 0
+	},
+	{
+		"delay": 0.242,
+		"type": 0
+	},
+	{
+		"delay": 0.464,
+		"type": 0
+	},
+	{
+		"delay": 0.232,
+		"type": 0
+	},
+	{
+		"delay": 0.245,
+		"type": 0
+	},
+	{
+		"delay": 0.456,
+		"type": 0
+	},
+	{
+		"delay": 0.216,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.232,
+		"type": 0
+	},
+	{
+		"delay": 0.461,
+		"type": 0
+	},
+	{
+		"delay": 0.234,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.221,
+		"type": 0
+	},
+	{
+		"delay": 0.242,
+		"type": 0
+	},
+	{
+		"delay": 0.458,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.234,
+		"type": 0
+	},
+	{
+		"delay": 0.464,
+		"type": 0
+	},
+	{
+		"delay": 0.218,
+		"type": 0
+	},
+	{
+		"delay": 0.477,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.458,
+		"type": 0
+	},
+	{
+		"delay": 0.253,
+		"type": 0
+	},
+	{
+		"delay": 0.219,
+		"type": 0
+	},
+	{
+		"delay": 0.237,
+		"type": 0
+	},
+	{
+		"delay": 0.219,
+		"type": 0
+	},
+	{
+		"delay": 0.235,
+		"type": 0
+	},
+	{
+		"delay": 0.461,
+		"type": 0
+	},
+	{
+		"delay": 0.232,
+		"type": 0
+	},
+	{
+		"delay": 0.218,
+		"type": 0
+	},
+	{
+		"delay": 0.227,
+		"type": 0
+	},
+	{
+		"delay": 0.245,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.232,
+		"type": 0
+	},
+	{
+		"delay": 0.221,
+		"type": 0
+	},
+	{
+		"delay": 0.229,
+		"type": 0
+	},
+	{
+		"delay": 0.218,
+		"type": 0
+	}
+]
