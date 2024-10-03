@@ -7,6 +7,7 @@ var acc: float
 var i = 0
 var current_hit
 var external_dir
+var scene_tree
 
 func _ready() -> void:
 	#hits = [
@@ -15,6 +16,7 @@ func _ready() -> void:
 		#{'type': Constants.HitType.BIGBLUE, 'delay': 2}, 
 		#{'type': Constants.HitType.BIGRED, 'delay': 1},
 	#]
+	scene_tree = get_tree()
 	var os_name = OS.get_name()
 	if os_name == 'Android':
 		external_dir = DirAccess.open('/storage/emulated/0')
@@ -27,18 +29,23 @@ func _ready() -> void:
 	#OS.alert(str(DirAccess.dir_exists_absolute('/storage/emulated')))
 	#OS.alert(str(DirAccess.dir_exists_absolute('/storage/emulated/0')))
 	
-	OS.alert(OS.get_user_data_dir())
-	DirAccess.dir_exists_absolute('/storage/emulated/0')
-	var dirs = DirAccess.get_directories_at('/storage/emulated/0/Download')
-	var emul = DirAccess.open('/storage/emulated/0')
-	FileAccess.UnixPermissionFlags
+	#OS.alert(OS.get_user_data_dir())
+	#DirAccess.dir_exists_absolute('/storage/emulated/0')
+	#var dirs = DirAccess.get_directories_at('/storage/emulated/0/Download')
 	
-	OS.alert(str(FileAccess.file_exists(external_dir + '/map1.zip')))
-	$Error.text += ' '.join(dirs) + '\n'
+	#var emul = DirAccess.open('/storage/emulated/0')
+	#var perm = OS.get_granted_permissions()
+	#var output = external_dir + '/map1.zip: ' + str(FileAccess.file_exists(external_dir + '/map1.zip')) + '\n'
+	#output += 'perm: ' + ' '.join(perm) + '\n'
+	#OS.alert(output)
+	#OS.alert(OS.get_system_dir(OS.SYSTEM_DIR_DESKTOP))
+	#OS.alert(OS.get_system_dir(OS.SYSTEM_DIR_DESKTOP, false))
+	#OS.alert(OS.get_user_data_dir())
+	
+	
 	load_map(external_dir + '/map1.zip')
 	ar = 2
 	acc = 0.5
-	$StartTimer.wait_time = ar
 
 
 func _process(delta: float) -> void:
@@ -56,37 +63,42 @@ func instantiate_hit(dict_hit) -> void:
 	add_child(hit)
 
 
-func next_hit(delay: float) -> Constants.HitType:
+#func next_hit(delay: float) -> Constants.HitType:
+func next_hit() -> Constants.HitType:
 	var new_hit = hits.pop_front()
+	var delay = $HitEndTimer.time_left
 	if new_hit:
-		$HitEndTimer.start(delay + new_hit.delay)
+		var res_delay = delay + new_hit.delay
+		#var res_delay = new_hit.delay
+		$ItemList.add_item(str(delay) + ' ' + str(res_delay)) 
+		$HitEndTimer.start(res_delay)
 		i -= 1
 	else:
 		OS.alert('stop')
 		$HitEndTimer.stop()
-	var tree = get_tree()
-	var node = tree.get_first_node_in_group('hits')
-	tree.queue_delete(node)
+	var node = scene_tree.get_first_node_in_group('hits')
+	scene_tree.queue_delete(node)
 	return node.type
 
 
 func load_map(file_name: String) -> void:
-	#OS.alert(str(FileAccess.file_exists(file_name)))
-	#OS.alert(file_name)
 	var reader = ZIPReader.new()
 	var err = reader.open(file_name)
 	if err != OK:
 		OS.alert('Ошибка чтения архива')
 	var map = reader.read_file('map1.map').get_string_from_ascii()
 	hits = JSON.parse_string(map)
-	$MapMusic.stream.data = reader.read_file('map1.mp3')
+	var map_music = AudioStreamMP3.new()
+	map_music.data = reader.read_file('map1.mp3')
+	$MapMusic.stream = map_music
 	reader.close()
 
 
 func drum_press(press_type: String) -> void:
 	var rest_time = $HitEndTimer.time_left
 	if 0 < rest_time && rest_time <= acc * 2:
-		var hit_type = next_hit($HitEndTimer.time_left)
+		#var dbg_hit = press_type +  ' ' + str(rest_time)
+		var hit_type = next_hit()
 		var is_excellent_interval = abs(rest_time - acc) <= acc / 2
 		var is_correct_press = ((press_type == 'inner' || press_type == 'double_inner') &&
 			hit_type == Constants.HitType.RED ||
@@ -110,7 +122,7 @@ func drum_press(press_type: String) -> void:
 			$CircleRate.play_animation('bad')
 			$Hud.break_multiplier()
 			$Label3.text += '\n'
-	$Label2.text += press_type + '\n'
+		#$ItemList.add_item(dbg_hit)
 
 
 func _on_start_timer_timeout() -> void:
@@ -137,4 +149,4 @@ func _on_hit_start_timer_timeout() -> void:
 func _on_hit_end_timer_timeout() -> void:
 	$CircleRate.play_animation('bad')
 	$Hud.break_multiplier()
-	next_hit(0)
+	next_hit()

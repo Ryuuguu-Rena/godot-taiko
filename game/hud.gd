@@ -39,6 +39,7 @@ func inner_press() -> void:
 		current_inner_signal = double_inner
 	else:
 		current_inner_signal = inner
+	#inner.emit()
 
 
 func inner_releas() -> void:
