@@ -1,11 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://dc853a0h81jf0"]
+[gd_scene load_steps=12 format=3 uid="uid://dc853a0h81jf0"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_5ywok"]
 [ext_resource type="Texture2D" uid="uid://dvmtfbc4gisk" path="res://resource/circle_rate/bad.png" id="1_td3v1"]
 [ext_resource type="PackedScene" uid="uid://b2vbsaafjjd8v" path="res://game/hit.tscn" id="2_blxoh"]
 [ext_resource type="Texture2D" uid="uid://cmbbdcgmnyh2q" path="res://resource/circle_rate/excellent.png" id="2_m4f5r"]
+[ext_resource type="PackedScene" uid="uid://dv4hnidngx7gq" path="res://game/result.tscn" id="3_7cigb"]
 [ext_resource type="PackedScene" uid="uid://cg773y0wxvc4y" path="res://game/HUD.tscn" id="3_ia4iv"]
 [ext_resource type="Texture2D" uid="uid://d0a1d5ben4ppd" path="res://resource/circle_rate/good.png" id="3_sjriq"]
+[ext_resource type="Script" path="res://game/result.gd" id="4_cfl14"]
 [ext_resource type="Texture2D" uid="uid://d4e6a7kfh6wn3" path="res://resource/circle_rate/none.png" id="4_v71qw"]
 [ext_resource type="Script" path="res://game/circle_rate.gd" id="7_c77nj"]
 
@@ -57,44 +59,8 @@ sprite_frames = SubResource("SpriteFrames_te63l")
 animation = &"none"
 script = ExtResource("7_c77nj")
 
-[node name="AnimTimer" type="Timer" parent="CircleRate"]
-one_shot = true
-
 [node name="HitPosition" type="Marker2D" parent="."]
 position = Vector2(1790, 250)
-
-[node name="StartTimer" type="Timer" parent="."]
-wait_time = 2.0
-one_shot = true
-autostart = true
-
-[node name="MusicTimer" type="Timer" parent="."]
-one_shot = true
-
-[node name="HitEndTimer" type="Timer" parent="."]
-process_priority = 1
-one_shot = true
-
-[node name="HitStartTimer" type="Timer" parent="."]
-process_priority = 1
-
-[node name="Label3" type="Label" parent="."]
-offset_left = 338.0
-offset_top = 411.0
-offset_right = 576.0
-offset_bottom = 600.0
-
-[node name="Label2" type="Label" parent="."]
-offset_left = 4.0
-offset_top = 402.0
-offset_right = 242.0
-offset_bottom = 591.0
-
-[node name="Error" type="Label" parent="."]
-offset_left = 3.0
-offset_top = 427.0
-offset_right = 1120.0
-offset_bottom = 590.0
 
 [node name="Label" type="Label" parent="."]
 offset_left = 8.0
@@ -105,18 +71,10 @@ offset_bottom = 101.0
 [node name="MapMusic" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(960, 607)
 
-[node name="ItemList" type="ItemList" parent="."]
-offset_left = -1.0
-offset_top = 419.0
-offset_right = 589.0
-offset_bottom = 1196.0
+[node name="Result" parent="." instance=ExtResource("3_7cigb")]
+script = ExtResource("4_cfl14")
 
 [connection signal="double_inner" from="Hud" to="." method="drum_press" binds= ["double_inner"]]
 [connection signal="double_outer" from="Hud" to="." method="drum_press" binds= ["double_outer"]]
 [connection signal="inner" from="Hud" to="." method="drum_press" binds= ["inner"]]
 [connection signal="outer" from="Hud" to="." method="drum_press" binds= ["outer"]]
-[connection signal="timeout" from="CircleRate/AnimTimer" to="CircleRate" method="_on_anim_timer_timeout"]
-[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
-[connection signal="timeout" from="MusicTimer" to="." method="_on_music_timer_timeout"]
-[connection signal="timeout" from="HitEndTimer" to="." method="_on_hit_end_timer_timeout"]
-[connection signal="timeout" from="HitStartTimer" to="." method="_on_hit_start_timer_timeout"]

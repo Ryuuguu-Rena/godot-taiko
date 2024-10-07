@@ -1,697 +1,871 @@
 [
 	{
+		"id": 0,
 		"delay": 0.127,
 		"type": 0
 	},
 	{
+		"id": 1,
 		"delay": 0.228,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 2,
 		"delay": 0.463,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 3,
 		"delay": 0.241,
 		"type": 0
 	},
 	{
+		"id": 4,
 		"delay": 0.226,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 5,
 		"delay": 0.467,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 6,
 		"delay": 0.241,
 		"type": 0
 	},
 	{
+		"id": 7,
 		"delay": 0.226,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 8,
 		"delay": 0.452,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 9,
 		"delay": 0.226,
 		"type": 0
 	},
 	{
+		"id": 10,
 		"delay": 0.241,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 11,
 		"delay": 0.467,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 12,
 		"delay": 0.208,
 		"type": 0
 	},
 	{
+		"id": 13,
 		"delay": 0.233,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 14,
 		"delay": 0.255,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 15,
 		"delay": 0.229,
 		"type": 0
 	},
 	{
+		"id": 16,
 		"delay": 0.235,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 17,
 		"delay": 0.229,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 18,
 		"delay": 0.24,
 		"type": 0
 	},
 	{
+		"id": 19,
 		"delay": 0.219,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 20,
 		"delay": 0.24,
 		"type": 0
 	},
 	{
+		"id": 21,
 		"delay": 0.346,
 		"type": 0
 	},
 	{
+		"id": 22,
 		"delay": 0.112,
 		"type": 0
 	},
 	{
+		"id": 23,
 		"delay": 0.917,
 		"type": 0
 	},
 	{
+		"id": 24,
 		"delay": 0.232,
 		"type": 0
 	},
 	{
+		"id": 25,
 		"delay": 0.228,
 		"type": 0
 	},
 	{
+		"id": 26,
 		"delay": 0.231,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 27,
 		"delay": 0.238,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 28,
 		"delay": 0.225,
 		"type": 0
 	},
 	{
+		"id": 29,
 		"delay": 0.238,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 30,
 		"delay": 0.231,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 31,
 		"delay": 0.238,
 		"type": 0
 	},
 	{
+		"id": 32,
 		"delay": 0.216,
 		"type": 0
 	},
 	{
+		"id": 33,
 		"delay": 0.238,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 34,
 		"delay": 0.344,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 35,
 		"delay": 0.113,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 36,
 		"delay": 0.918,
 		"type": 0
 	},
 	{
+		"id": 37,
 		"delay": 0.239,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 38,
 		"delay": 0.225,
 		"type": 0
 	},
 	{
+		"id": 39,
 		"delay": 0.233,
 		"type": 0
 	},
 	{
+		"id": 40,
 		"delay": 0.236,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 41,
 		"delay": 0.229,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 42,
+		"delay": 0.231,
+		"type": 1
+	},
+	{
+		"id": 43,
 		"delay": 0.231,
 		"type": 0
 	},
 	{
-		"delay": 0.231,
-		"type": 0
-	},
-	{
+		"id": 44,
 		"delay": 0.233,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 45,
 		"delay": 0.226,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 46,
 		"delay": 0.242,
 		"type": 0
 	},
 	{
+		"id": 47,
 		"delay": 0.45,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 48,
 		"delay": 0.231,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 49,
+		"delay": 0.121,
+		"type": 1
+	},
+	{
+		"id": 50,
 		"delay": 0.121,
 		"type": 0
 	},
 	{
-		"delay": 0.121,
-		"type": 0
-	},
-	{
+		"id": 51,
 		"delay": 0.231,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 52,
 		"delay": 0.446,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 53,
 		"delay": 0.251,
 		"type": 0
 	},
 	{
+		"id": 54,
 		"delay": 0.217,
 		"type": 0
 	},
 	{
+		"id": 55,
 		"delay": 0.231,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 56,
 		"delay": 0.242,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 57,
 		"delay": 0.224,
 		"type": 0
 	},
 	{
+		"id": 58,
 		"delay": 0.233,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 59,
 		"delay": 0.242,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 60,
 		"delay": 0.226,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 61,
 		"delay": 0.208,
 		"type": 0
 	},
 	{
+		"id": 62,
 		"delay": 0.247,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 63,
 		"delay": 0.22,
 		"type": 0
 	},
 	{
+		"id": 64,
 		"delay": 0.238,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 65,
 		"delay": 0.229,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 66,
 		"delay": 0.238,
 		"type": 0
 	},
 	{
+		"id": 67,
 		"delay": 0.226,
 		"type": 0
 	},
 	{
+		"id": 68,
 		"delay": 0.229,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 69,
 		"delay": 0.244,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 70,
 		"delay": 0.224,
 		"type": 0
 	},
 	{
+		"id": 71,
 		"delay": 0.455,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 72,
 		"delay": 0.233,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 73,
 		"delay": 0.224,
 		"type": 0
 	},
 	{
+		"id": 74,
 		"delay": 0.242,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 75,
 		"delay": 0.224,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 76,
 		"delay": 0.244,
 		"type": 0
 	},
 	{
+		"id": 77,
 		"delay": 0.341,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 78,
 		"delay": 0.887,
 		"type": 0
 	},
 	{
+		"id": 79,
 		"delay": 0.137,
 		"type": 0
 	},
 	{
+		"id": 80,
 		"delay": 0.237,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 81,
 		"delay": 0.224,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 82,
 		"delay": 0.232,
 		"type": 0
 	},
 	{
+		"id": 83,
 		"delay": 0.237,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 84,
+		"delay": 0.229,
+		"type": 1
+	},
+	{
+		"id": 85,
 		"delay": 0.229,
 		"type": 0
 	},
 	{
+		"id": 86,
 		"delay": 0.229,
-		"type": 0
+		"type": 1
 	},
 	{
-		"delay": 0.229,
-		"type": 0
-	},
-	{
+		"id": 87,
 		"delay": 0.24,
 		"type": 0
 	},
 	{
+		"id": 88,
 		"delay": 0.224,
 		"type": 0
 	},
 	{
+		"id": 89,
 		"delay": 0.229,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 90,
 		"delay": 0.349,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 91,
 		"delay": 0.893,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 92,
 		"delay": 0.139,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 93,
 		"delay": 0.233,
 		"type": 0
 	},
 	{
+		"id": 94,
 		"delay": 0.231,
 		"type": 0
 	},
 	{
+		"id": 95,
 		"delay": 0.235,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 96,
 		"delay": 0.229,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 97,
 		"delay": 0.229,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 98,
 		"delay": 0.233,
 		"type": 0
 	},
 	{
+		"id": 99,
 		"delay": 0.235,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 100,
 		"delay": 0.231,
 		"type": 0
 	},
 	{
+		"id": 101,
 		"delay": 0.231,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 102,
 		"delay": 0.238,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 103,
 		"delay": 0.229,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 104,
 		"delay": 0.11,
 		"type": 0
 	},
 	{
+		"id": 105,
 		"delay": 0.455,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 106,
 		"delay": 0.111,
 		"type": 0
 	},
 	{
+		"id": 107,
 		"delay": 0.229,
 		"type": 0
 	},
 	{
+		"id": 108,
 		"delay": 0.464,
 		"type": 0
 	},
 	{
+		"id": 109,
 		"delay": 0.242,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 110,
 		"delay": 0.241,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 111,
 		"delay": 0.217,
 		"type": 0
 	},
 	{
+		"id": 112,
 		"delay": 0.23,
 		"type": 0
 	},
 	{
+		"id": 113,
 		"delay": 0.226,
 		"type": 0
 	},
 	{
+		"id": 114,
 		"delay": 0.23,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 115,
 		"delay": 0.234,
 		"type": 0
 	},
 	{
+		"id": 116,
 		"delay": 0.237,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 117,
 		"delay": 0.226,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 118,
 		"delay": 0.462,
 		"type": 0
 	},
 	{
+		"id": 119,
 		"delay": 0.253,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 120,
 		"delay": 0.436,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 121,
 		"delay": 0.453,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 122,
 		"delay": 0.245,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 123,
 		"delay": 0.224,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 124,
 		"delay": 0.24,
 		"type": 0
 	},
 	{
+		"id": 125,
 		"delay": 0.461,
 		"type": 0
 	},
 	{
+		"id": 126,
 		"delay": 0.229,
 		"type": 0
 	},
 	{
+		"id": 127,
 		"delay": 0.464,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 128,
 		"delay": 0.237,
 		"type": 0
 	},
 	{
+		"id": 129,
 		"delay": 0.227,
 		"type": 0
 	},
 	{
+		"id": 130,
 		"delay": 0.456,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 131,
 		"delay": 0.237,
 		"type": 0
 	},
 	{
+		"id": 132,
 		"delay": 0.229,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 133,
 		"delay": 0.461,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 134,
 		"delay": 0.237,
 		"type": 0
 	},
 	{
+		"id": 135,
 		"delay": 0.213,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 136,
 		"delay": 0.242,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 137,
 		"delay": 0.464,
 		"type": 0
 	},
 	{
+		"id": 138,
 		"delay": 0.232,
 		"type": 0
 	},
 	{
+		"id": 139,
 		"delay": 0.245,
 		"type": 0
 	},
 	{
+		"id": 140,
 		"delay": 0.456,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 141,
 		"delay": 0.216,
 		"type": 0
 	},
 	{
+		"id": 142,
 		"delay": 0.229,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 143,
 		"delay": 0.229,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 144,
 		"delay": 0.232,
 		"type": 0
 	},
 	{
+		"id": 145,
 		"delay": 0.461,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 146,
 		"delay": 0.234,
 		"type": 0
 	},
 	{
+		"id": 147,
 		"delay": 0.229,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 148,
 		"delay": 0.221,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 149,
 		"delay": 0.242,
 		"type": 0
 	},
 	{
+		"id": 150,
 		"delay": 0.458,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 151,
 		"delay": 0.229,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 152,
 		"delay": 0.234,
 		"type": 0
 	},
 	{
+		"id": 153,
 		"delay": 0.464,
 		"type": 0
 	},
 	{
+		"id": 154,
 		"delay": 0.218,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 155,
 		"delay": 0.477,
 		"type": 0
 	},
 	{
+		"id": 156,
 		"delay": 0.229,
 		"type": 0
 	},
 	{
+		"id": 157,
 		"delay": 0.229,
 		"type": 0
 	},
 	{
+		"id": 158,
 		"delay": 0.458,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 159,
 		"delay": 0.253,
 		"type": 0
 	},
 	{
+		"id": 160,
 		"delay": 0.219,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 161,
 		"delay": 0.237,
 		"type": 0
 	},
 	{
+		"id": 162,
 		"delay": 0.219,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 163,
 		"delay": 0.235,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 164,
 		"delay": 0.461,
 		"type": 0
 	},
 	{
+		"id": 165,
 		"delay": 0.232,
 		"type": 0
 	},
 	{
+		"id": 166,
 		"delay": 0.218,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 167,
 		"delay": 0.227,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 168,
 		"delay": 0.245,
 		"type": 0
 	},
 	{
+		"id": 169,
 		"delay": 0.229,
 		"type": 0
 	},
 	{
+		"id": 170,
 		"delay": 0.232,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 171,
 		"delay": 0.221,
-		"type": 0
+		"type": 1
 	},
 	{
+		"id": 172,
 		"delay": 0.229,
 		"type": 0
 	},
 	{
+		"id": 173,
 		"delay": 0.218,
 		"type": 0
 	}

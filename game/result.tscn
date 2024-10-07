@@ -1,0 +1,195 @@
+[gd_scene load_steps=9 format=3 uid="uid://dv4hnidngx7gq"]
+
+[sub_resource type="Theme" id="Theme_316c7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_selon"]
+bg_color = Color(0.270222, 0.270222, 0.270222, 0.937255)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17tks"]
+bg_color = Color(0.144063, 0.144063, 0.144063, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mjwvq"]
+resource_local_to_scene = true
+font_size = 150
+
+[sub_resource type="LabelSettings" id="LabelSettings_57t3v"]
+resource_local_to_scene = true
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_nb6nx"]
+resource_local_to_scene = true
+font_size = 30
+font_color = Color(1, 0.776471, 0.298039, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_f3w07"]
+resource_local_to_scene = true
+font_size = 30
+font_color = Color(0.317647, 1, 0.329412, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7uecq"]
+resource_local_to_scene = true
+font_size = 30
+font_color = Color(0.701961, 0.109804, 0, 1)
+
+[node name="Node" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Background" type="Panel" parent="."]
+offset_left = -11.0
+offset_top = -8.0
+offset_right = 1928.0
+offset_bottom = 1208.0
+theme = SubResource("Theme_316c7")
+theme_override_styles/panel = SubResource("StyleBoxFlat_selon")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 572.0
+offset_top = 49.0
+offset_right = 1364.0
+offset_bottom = 1092.0
+theme = SubResource("Theme_316c7")
+theme_override_styles/panel = SubResource("StyleBoxFlat_17tks")
+
+[node name="Mark" type="Label" parent="."]
+offset_left = 773.0
+offset_top = 405.0
+offset_right = 1188.0
+offset_bottom = 610.0
+text = "mark"
+label_settings = SubResource("LabelSettings_mjwvq")
+horizontal_alignment = 1
+
+[node name="Nickname" type="Label" parent="."]
+offset_left = 775.0
+offset_top = 102.0
+offset_right = 1154.0
+offset_bottom = 161.0
+text = "nickname"
+label_settings = SubResource("LabelSettings_57t3v")
+horizontal_alignment = 1
+
+[node name="Mapname" type="Label" parent="."]
+offset_left = 776.0
+offset_top = 230.0
+offset_right = 1155.0
+offset_bottom = 289.0
+text = "mapname"
+label_settings = SubResource("LabelSettings_57t3v")
+horizontal_alignment = 1
+
+[node name="Points" type="Label" parent="."]
+offset_left = 792.0
+offset_top = 707.0
+offset_right = 1171.0
+offset_bottom = 766.0
+text = "points"
+label_settings = SubResource("LabelSettings_57t3v")
+horizontal_alignment = 1
+
+[node name="Value" type="Label" parent="Points"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 35.0
+offset_right = 385.0
+offset_bottom = 94.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_57t3v")
+horizontal_alignment = 1
+
+[node name="Accuracy" type="Label" parent="."]
+offset_left = 587.0
+offset_top = 806.0
+offset_right = 966.0
+offset_bottom = 865.0
+text = "acc"
+label_settings = SubResource("LabelSettings_57t3v")
+horizontal_alignment = 1
+
+[node name="Value" type="Label" parent="Accuracy"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 37.0
+offset_right = 384.0
+offset_bottom = 96.0
+text = "0%"
+label_settings = SubResource("LabelSettings_57t3v")
+horizontal_alignment = 1
+
+[node name="MaxCombo" type="Label" parent="."]
+offset_left = 918.0
+offset_top = 801.0
+offset_right = 1297.0
+offset_bottom = 860.0
+text = "combo"
+label_settings = SubResource("LabelSettings_57t3v")
+horizontal_alignment = 1
+
+[node name="Value" type="Label" parent="MaxCombo"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 34.0
+offset_right = 381.0
+offset_bottom = 93.0
+text = "0 / 0"
+label_settings = SubResource("LabelSettings_57t3v")
+horizontal_alignment = 1
+
+[node name="ExcCount" type="Label" parent="."]
+offset_left = 546.0
+offset_top = 929.0
+offset_right = 826.0
+offset_bottom = 988.0
+text = "excellent"
+label_settings = SubResource("LabelSettings_nb6nx")
+horizontal_alignment = 1
+
+[node name="Value" type="Label" parent="ExcCount"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 49.0
+offset_right = 255.0
+offset_bottom = 108.0
+text = "0"
+label_settings = SubResource("LabelSettings_57t3v")
+horizontal_alignment = 1
+
+[node name="GodCount" type="Label" parent="."]
+offset_left = 908.0
+offset_top = 933.0
+offset_right = 1078.0
+offset_bottom = 990.0
+text = "good"
+label_settings = SubResource("LabelSettings_f3w07")
+horizontal_alignment = 1
+
+[node name="Value" type="Label" parent="GodCount"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 45.0
+offset_right = 160.0
+offset_bottom = 95.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_57t3v")
+horizontal_alignment = 1
+
+[node name="BadCount" type="Label" parent="."]
+offset_left = 1138.0
+offset_top = 927.0
+offset_right = 1394.0
+offset_bottom = 986.0
+text = "bad"
+label_settings = SubResource("LabelSettings_7uecq")
+horizontal_alignment = 1
+
+[node name="Value" type="Label" parent="BadCount"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 50.0
+offset_right = 201.0
+offset_bottom = 98.0
+text = "0"
+label_settings = SubResource("LabelSettings_57t3v")
+horizontal_alignment = 1
