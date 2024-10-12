@@ -72,6 +72,7 @@ offset_bottom = 101.0
 position = Vector2(960, 607)
 
 [node name="Result" parent="." instance=ExtResource("3_7cigb")]
+visible = false
 script = ExtResource("4_cfl14")
 
 [connection signal="double_inner" from="Hud" to="." method="drum_press" binds= ["double_inner"]]

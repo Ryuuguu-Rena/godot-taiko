@@ -21,7 +21,7 @@ func _ready() -> void:
 		if !external_dir.dir_exists('taikogame'):
 			external_dir.make_dir('taikogame')
 		external_dir = '/storage/emulated/0/taikogame'
-	elif os_name == 'Linux':
+	elif os_name == 'Linux' || os_name == 'Windows':
 		external_dir = 'res://resource/map'
 	
 	#OS.alert(OS.get_system_dir(OS.SYSTEM_DIR_DESKTOP))
@@ -33,15 +33,15 @@ func _ready() -> void:
 	acc = 0.2
 	load_map(external_dir + '/map1.zip')
 	
-	var result = $Hud.get_result()
-	result.merge({
-		'mark': 'b',
-		'acc': 100,
-		'map_name': 'map1',
-		'nick_name': '???',
-		'map_max_combo': map_max_combo
-	})
-	$Result.show_result(result)
+	#var result = $Hud.get_result()
+	#result.merge({
+		#'mark': 'b',
+		#'acc': 100,
+		#'map_name': 'map1',
+		#'nick_name': '???',
+		#'map_max_combo': map_max_combo
+	#})
+	#$Result.show_result(result)
 	
 	#hits = [
 		#{'type': Constants.HitType.RED, 'delay': 1},
