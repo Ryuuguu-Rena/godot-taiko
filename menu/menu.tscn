@@ -48,12 +48,12 @@ offset_top = 113.0
 offset_right = 1308.0
 offset_bottom = 183.0
 
-[node name="TextEdit2" type="TextEdit" parent="."]
-layout_mode = 0
-offset_left = 117.0
-offset_top = 240.0
-offset_right = 495.0
-offset_bottom = 406.0
+[node name="ItemList2" type="ItemList" parent="."]
+offset_left = 89.0
+offset_top = 220.0
+offset_right = 585.0
+offset_bottom = 520.0
+script = ExtResource("4_g3ftf")
 
 [node name="ItemList" type="ItemList" parent="."]
 layout_mode = 0
